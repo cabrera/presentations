@@ -79,7 +79,6 @@ Python syntax is similar to C, C++, C#, and Java.
 
 > * Arithmetic operators: ```+, -, *, /```
 > * Bit-wise Operations: ```<<, >>, &, |, ^, ~```
-> * Logical Operations: ```!, &&, ||```
 > * Assign: ```=, +=, -=, *=, /=, <<=, >>=, &=, |=, ^=```
 > * Compare: ```==, !=, <, >, <=, >=```
 
@@ -144,6 +143,16 @@ Multiple assignment is allowed (and idiomatic!):
 ```python
 a, b = 1, 2 # a = 1, b = 2
 a, b = b, a # swaps a and b
+```
+
+Syntax: What's Different
+======
+
+Logical operators are all keywords (they still short-circuit):
+
+```python
+if (x < 0 and x > 10 or y > 10):
+    print('Pass!')
 ```
 
 Syntax: What's Different
@@ -242,6 +251,8 @@ my_complex_beast = {('2', 'H'): [23], ('4', 'D'): 134}
 
 As are Booleans: ```True, False```
 
+There's even a built-in null type: ```None```
+
 Syntax: What's Different
 ======
 
@@ -307,8 +318,8 @@ Syntax: What's Different
 ```python
 >>> range(0, 10, 2)
 range(0, 10, 2)
->>> open('.')
-<_io.TextIOWrapper name='talk.html' mode='r'
+>>> open('talk.md')
+<_io.TextIOWrapper name='talk.md' mode='r'
 encoding='UTF-8'>
 >>> str(1)
 '1'
@@ -567,7 +578,7 @@ Context Managers: without
 The Tools
 =====
 
-![Sometimes they work better than Python](tools.jpg)
+![Be a Pythonista](tools.jpg)
 
 The Tools
 =====
@@ -719,6 +730,7 @@ Some pointers:
 * Read [The Hitchhiker's Guide to Python](https://python-guide.readthedocs.org/en/latest/)
 * Watch some [inspiring](http://www.youtube.com/watch?v=Y97D8j6CAog), [opinionated](http://www.youtube.com/watch?v=o9pEzgHorH0), and [interesting](https://us.pycon.org/2012/schedule/) Python videos
 * Get a poster of [The Zen of Python](http://www.python.org/dev/peps/pep-0020/)
+* Learn to [Code Like a Pythonista!](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 * Participate in a Rackspace Hackday!
 
 Thanks
