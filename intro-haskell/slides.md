@@ -384,17 +384,18 @@ factorial n
 describeList :: [a] -> String
 describeList xs = case xs of
   [] -> "empty"
-  [x] -> "singleton"
-  xs -> "longer list"
+  [_] -> "singleton"
+  _ -> "longer list"
 ```
 
 # Where: Inline Definitions After the Fact
 
 ```haskell
+validArea :: (Ord a, Num a) => a -> a -> Bool
 validArea x y
-  | (area x y) >= 0 = True
+  | area x y >= 0 = True
   | otherwise = False
-  where area = x * y
+  where area x' y' = x' * y'
 ```
 
 # Let-In: Inline Definitions as a Prologue
@@ -402,8 +403,8 @@ validArea x y
 ```haskell
 analyzeNumber :: (Ord a, Num a) => a -> Bool
 analyzeNumber n =
-  let analyze n = (n * n) > 2
-      reasonable n = (analyze n) == True
+  let analyze n' = (n' * n')
+      reasonable n' = analyze n' > 2
   in
     reasonable n
 ```
@@ -413,7 +414,7 @@ analyzeNumber n =
 ```haskell
 starter :: String -> String
 starter "" = "empty"
-starter all@(x:xs) = all ++ " starts with " ++ x
+starter all_xs@(x:_) = all_xs ++ " starts with " ++ [x]
 ```
 
 # A Little More Syntax: Abstraction
@@ -487,7 +488,7 @@ Ok, modules loaded: Main.
 # Simple Types: Records
 
 ```haskell
-data Person =
+data Person = Person
   { name :: String
   , age :: Int
   }
@@ -508,6 +509,7 @@ Person "Lantern" 28
 # Simple Types: Type Parameters
 
 ```haskell
+-- A type that already exists
 data Maybe a =
   Just a
   | Nothing deriving (Show, Eq)
@@ -724,11 +726,10 @@ Node 2 (Node 1 EmptyTree EmptyTree)
 class Eq' a where
     -- point-free default impls.
     -- provide one of (==') or (/=')
-    (==') :: a -> a -> Bool
-    (==') = not (/=')
-
-    (/=') :: a -> a -> Bool
-    (/=') = not (==)
+    (===) :: a -> a -> Bool
+    (/==) :: a -> a -> Bool
+    l === r = not $ l /== r
+    l /== r = not $ l === r
 ```
 
 # Example: A Manual Typeclass Instance for Weekdays
@@ -751,14 +752,15 @@ module Geometry.Circle
 , perimeter
 ) where
 
-pi :: Float
-pi = 3.1415926  -- the most accurate
+-- the most accurate; more accurate than Prelude.pi
+pi' :: Float
+pi' = 3.1415926
 
 area :: Float -> Float
-area r = pi * r**2
+area r = pi' * r**2
 
 perimeter :: Float -> Float
-perimeter r = 2 * pi * r
+perimeter r = 2 * pi' * r
 ```
 
 # Using a Module
