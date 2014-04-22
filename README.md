@@ -23,3 +23,8 @@ worth of programming language theory to write better software.
 tags: haskell, type theory, type systems, functional programming,
 higher-order functions, communication, mathematics
 ```
+
+## License
+
+All material available under
+[Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)
