@@ -1,14 +1,14 @@
 % An Introduction to Haskell, Type Systems, and Functional Programming
-% Alejandro Cabrera (@cppcabrera)
+% Allele Dev (@queertypes)
 
 ```haskell
 {-# LANGUAGE OverloadedStrings #-}
-import qualified Data.Text as T
+import qualified Data.Text (Text)
 
-meta :: [(T.Text, T.Text)]
+meta :: [(Text, Text)]
 meta = [
-  ("Author", "Alejandro Cabrera")
-  , ("Email", "cpp.cabrera@gmail.com")
+  ("Author", "Allele Dev")
+  , ("Email", "allele.dev@gmail.com")
   , ("Objectives", "Introduce: Haskell, Types, FP")
   ]
 
@@ -18,10 +18,10 @@ main = print meta
 
 # Contact Me!
 
-* IRC: alcabrera @ freenode.net
-* Github: [cabrera](https://github.com/cabrera)
-* Twitter: @[cppcabrera](https://twitter.com/cppcabrera)
-* Blog: [Read, Review, Refactor](https://blog.cppcabrera.com/)
+* IRC: alleledev @ freenode.net
+* Github: [queertypes](https://github.com/queertypes)
+* Twitter: @[queertypes](https://twitter.com/queertypes)
+* Blog: [Queer Types](https://queertypes.com/)
 
 # Goal
 
@@ -1058,7 +1058,7 @@ fold f init (x:xs) = f x $ fold f init xs
 > * Must prove that certain states cannot be reached
 >     * "Make illegal states unrepresentable": [video](http://vimeo.com/14313378) -- Yaron Minsky
 > * Communicate design
->     * Compiler [enforces assumptions](https://blog.cppcabrera.com/posts/reality-and-programming.html) and abstractions
+>     * Compiler [enforces assumptions](https://queertypes.com/posts/18-reality-and-programming.html) and abstractions
 >     * Turn "don't do that" -> "can't do that": [video](http://vimeo.com/72870631)
 
 # Software Development with Rich Types

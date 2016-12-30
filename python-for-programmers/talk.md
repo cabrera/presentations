@@ -5,7 +5,7 @@ from pprint import pprint
 
 if __name__ == '__main__':
     meta = {
-        'author': 'Alejandro Cabrera',
+        'author': 'Allele Dev',
         'office': 'Racklanta',
         'objective': 'Level Up!'
     }
@@ -363,7 +363,7 @@ The Python Way
 Leave behind your C-like patterns lest you experience... the unmaintainable!
 
 ```python
-new_gpio = (MB_IN8(bay, KL_GPIO_MEDIABAY_IRQ) & 
+new_gpio = (MB_IN8(bay, KL_GPIO_MEDIABAY_IRQ) &
            KEYLARGO_GPIO_INPUT_DATA)
 if new_gpio:
   bay.cached_gpio = new_gpio
@@ -638,7 +638,7 @@ The Tools: pep8
 
 ```bash
 $ pep8 my.py
-pep8 my.py 
+pep8 my.py
 my.py:2:1: E302 expected 2 blank lines, found 0
 my.py:2:22: E231 missing whitespace after ','
 my.py:2:24: E231 missing whitespace after ','
@@ -656,7 +656,7 @@ Think of autopep8 as 'the quick fix' that's also safe and awesome.
 ```bash
 $ autopep8 -i my.py
 $ pep8 my.py
-$ 
+$
 ```
 
 The Tools: pylint
@@ -679,7 +679,7 @@ $ pip install requests
 >>> import requests
 >>> resp = requests.get('https://rse.drivesrvr.com/health')
 >>> resp.headers
-{'date': 'Thu, 24 Jan 2013 06:50:57 GMT', 'connection':
+{'date': 'Thu, 24 Jan 2016 06:50:57 GMT', 'connection':
 'keep-alive', 'content-length': '3', 'server':
 'gunicorn/0.13.4'}
 >>> resp.content

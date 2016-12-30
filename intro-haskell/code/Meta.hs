@@ -5,8 +5,8 @@ import qualified Data.Text as T
 
 meta :: [(T.Text, T.Text)]
 meta = [
-  ("Author", "Alejandro Cabrera")
-  , ("Email", "cpp.cabrera@gmail.com")
+  ("Author", "Allele Dev")
+  , ("Email", "allele.dev@gmail.com")
   , ("Objectives", "Introduce: Haskell, Types, FP")
   ]
 
